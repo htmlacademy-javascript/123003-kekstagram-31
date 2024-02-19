@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
-* Студент: [Юлия Афанасьева](https://up.htmlacademy.ru/javascript/31/user/123003).
-* Наставник: `Неизвестно`.
+- Студент: [Юлия Афанасьева](https://up.htmlacademy.ru/javascript/31/user/123003).
+- Наставник: `Keksobot`.
 
 ---
 
