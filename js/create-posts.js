@@ -41,4 +41,6 @@ const createPost = (id) => ({
 const createPosts = () =>
   Array.from({ length: POSTS_COUNT }, (_, index) => createPost(index + 1));
 
-export { createPosts };
+const posts = createPosts();
+
+export { posts };

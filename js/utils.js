@@ -15,4 +15,15 @@ function getRandomInteger(min, max) {
 const getRandomArrayElement = (elements) =>
   elements[getRandomInteger(0, elements.length - 1)];
 
-export { getRandomInteger, getRandomArrayElement };
+const getTemplate = (id) => {
+  const template = document.getElementById(id);
+  if (!template) {
+    throw new Error(`Template ${id} not found`);
+  }
+  if (!(template instanceof HTMLTemplateElement)) {
+    throw new Error('Not template element');
+  }
+  return template.content.firstElementChild;
+};
+
+export { getRandomInteger, getRandomArrayElement, getTemplate };
