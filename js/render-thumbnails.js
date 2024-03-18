@@ -12,12 +12,17 @@ const createThumbnail = ({ url, description, likes, comments, id }) => {
   thumbnail.querySelector('.picture__img').setAttribute('alt', description);
   thumbnail.querySelector('.picture__likes').textContent = likes;
   thumbnail.querySelector('.picture__comments').textContent = comments.length;
+
   return thumbnail;
 };
 
-posts.forEach((post) => {
-  const thumbnail = createThumbnail(post);
-  thumbnailsFragment.appendChild(thumbnail);
-});
+const renderThumbnails = () => {
+  posts.forEach((post) => {
+    const thumbnail = createThumbnail(post);
+    thumbnailsFragment.appendChild(thumbnail);
+  });
 
-thumbnailsContainer.appendChild(thumbnailsFragment);
+  thumbnailsContainer.appendChild(thumbnailsFragment);
+};
+
+export { thumbnailsContainer, renderThumbnails };
